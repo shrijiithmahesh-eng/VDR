@@ -1,1 +1,14 @@
-
+So Lets start from the start, whats a kernel?
+a kernel sits between the hardware and the software
+diagram:
+Application software
+Operating system
+kernel
+hardware
+Some kernels are:
+Linux, windows NT, etc
+VAC OS is an OS not for daily driving, but for terriforming  mars.there have been some kernel improvements in the kernel.
+WARNING: VAC OS IS IN V1 , ITS NOT TESTED YET, PLEASE DON'T TRY IT ON YOUR MACHINE
+Its on https://github.com/shrijiithmahesh-eng/VAC_Software/
+Some improvemnts:
+USING GDT
