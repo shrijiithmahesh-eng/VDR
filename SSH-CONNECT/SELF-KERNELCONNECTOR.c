@@ -1,10 +1,11 @@
+#include "connect.c"
 void write(char *data) {
-  // 1. Point to the Log Slab
+    // 1. Point to the Log Slab
   FILE *log_file = fopen("/IMPO/ssh/connection.log", "a");
 
   if (log_file == NULL) {
     print_string("[ERROR] CANNOT FIND LOG . SKIPPING LOGGING");
-    return;
+    
   }
 
   // 2. Iron-Melt the data into the file
