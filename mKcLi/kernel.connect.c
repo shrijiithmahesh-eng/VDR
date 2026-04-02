@@ -1,4 +1,4 @@
-#include "shell.1.c"
+#include "shell.emergancy.c"
 void write(char *data) {
     // 1. Point to the Log Slab
   FILE *log_file = fopen("/IMPO/SHELL/0.txt", "a");
