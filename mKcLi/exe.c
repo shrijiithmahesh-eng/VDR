@@ -20,8 +20,9 @@ void command-run()
         // 3. The Parent Path (The Architect)
         printf("[PARENT] I created a Child with PID: %d. Waiting...\n", pid);
         wait(NULL); // Wait for the child to finish so we don't get 'Zombies'
-          }
+    }
 // 1. Check for the Master Command
+void SYSexe() {
 if (strncmp(input, "SYSTEM.EXECUTE", 14) == 0) {
     char *start = strchr(input, '(');
     char *end = strrchr(input, ')');
