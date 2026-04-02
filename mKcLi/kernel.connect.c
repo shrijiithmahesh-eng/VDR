@@ -1,10 +1,10 @@
 #include "shell.emergancy.c"
 void write(char *data) {
     // 1. Point to the Log Slab
-  FILE *log_file = fopen("/IMPO/SHELL/0.txt", "a");
+  FILE *log_file = fopen("/IMPO/mKcLi/0.txt", "a");
 
   if (log_file == NULL) {
-    print_string("[ERROR] CANNOT FIND LOG . SKIPPING LOGGING");
+    print_string("[ERROR] CANNOT FIND LOG");
     SHELL.exu();
  }
 
