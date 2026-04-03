@@ -9,7 +9,7 @@ void command-run()
         // 2. The Child Path (The Worker)
         printf("[CHILD] I am the Clone. Executing command...\n");
         
-        char *args[] = {"/IMPO/mKcLi/ls.h", "-l", NULL};
+        char *args[] = {"/IMPO/mKcLi/ls.bin", "-l", NULL};
         execvp(args[0], args); // This replaces the child with the 'ls' program
         
         // If execvp fails, this runs:
