@@ -23,6 +23,28 @@ void command-run()
     }
 // 1. Check for the Master Command
 void SYSexe() {
+if (strncmp(input, "SHUTDOWN", 14) == 0) {
+    char *start = strchr(input, '(');
+    char *end = strrchr(input, ')');
+
+    if (start && end && start < end) {
+        // 2. Extract the "File" name from between ( and )
+        int len = end - start - 1;
+        char target[256];
+        strncpy(target, start + 1, len);
+        target[len] = '\0';
+
+        // 3. Force-Route to the Sovereign Header
+        printf("[SYSTEM] HOOK ACTIVATED: ROUTING TO /IMPO/mKcLi/SHUTDOWN.h\n");
+        
+        // This runs YOUR specific logic from the mKcLi_ folder
+        // We pass the 'target' as the argument to your connected logic
+        run(target); 
+    } else {
+        printf("[ERROR] INVALID COMMAND .. \n");
+    }
+    continue; // Skip the normal fork() path
+}
 if (strncmp(input, "SYSTEM.EXECUTE", 14) == 0) {
     char *start = strchr(input, '(');
     char *end = strrchr(input, ')');
@@ -35,7 +57,7 @@ if (strncmp(input, "SYSTEM.EXECUTE", 14) == 0) {
         target[len] = '\0';
 
         // 3. Force-Route to the Sovereign Header
-        printf("[SYSTEM] HOOK ACTIVATED: ROUTING TO /IMPO/mKcLi/SYSTEM.EXECUTE.h\n");
+        printf("[SYSTEM] HOOK ACTIVATED: ROUTING TO /IMPO/mKcLi/SYSTEM.OPEN.h\n");
         
         // This runs YOUR specific logic from the mKcLi_ folder
         // We pass the 'target' as the argument to your connected logic
