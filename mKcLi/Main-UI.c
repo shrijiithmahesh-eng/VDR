@@ -1,4 +1,4 @@
-#include "exe.h"
+#include "exe.c"
 void UI() {
   print_string("KERNEL EVALUATION[OK]");
   print_string("STARTED CLI");
